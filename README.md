@@ -1,7 +1,8 @@
 # rms-db-iac
 Contains the Database related Infrastructure as code (IaC) of the [RMS project](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff).
 
-[badge do CI aqui]\
+[![Terraform Apply](https://github.com/Grupo-G03-4SOAT-FIAP/rms-db-iac/actions/workflows/terraform-apply.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-db-iac/actions/workflows/terraform-apply.yml)
+[![Terraform Plan](https://github.com/Grupo-G03-4SOAT-FIAP/rms-db-iac/actions/workflows/terraform-plan.yml/badge.svg)](https://github.com/Grupo-G03-4SOAT-FIAP/rms-db-iac/actions/workflows/terraform-plan.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Grupo-G03-4SOAT-FIAP_rms-db-iac&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Grupo-G03-4SOAT-FIAP_rms-db-iac)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Grupo-G03-4SOAT-FIAP_rms-db-iac&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Grupo-G03-4SOAT-FIAP_rms-db-iac)
 
@@ -23,7 +24,7 @@ export AWS_SECRET_ACCESS_KEY=???
 
 > Substitua os sinais de interrogação `???` acima pelas suas credenciais do IAM da AWS.
 
-## Como aplicar o plano de execução do Terraform
+## Como aplicar o plano de execução do Terraform manualmente
 
 1. Clone este repositório;
 2. Navegue até a pasta raiz do projeto;
