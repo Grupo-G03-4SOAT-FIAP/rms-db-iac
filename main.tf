@@ -66,7 +66,7 @@ resource "aws_db_parameter_group" "rms" {
 
   parameter {
     name  = "rds.force_ssl"
-    value = "0"
+    value = "0" # Desativa o SSL obrigatório
   }
 }
 
