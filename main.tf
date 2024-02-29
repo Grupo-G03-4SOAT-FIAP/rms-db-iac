@@ -29,7 +29,6 @@ resource "aws_db_subnet_group" "rms" {
   subnet_ids = module.vpc.public_subnets
 
   tags = {
-    Name        = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -54,7 +53,6 @@ resource "aws_security_group" "rds" {
   }
 
   tags = {
-    Name        = "rds"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -83,4 +81,9 @@ resource "aws_db_instance" "rms" {
   parameter_group_name   = aws_db_parameter_group.rms.name
   publicly_accessible    = true
   skip_final_snapshot    = true
+
+  tags = {
+    Terraform   = "true"
+    Environment = "prod"
+  }
 }
