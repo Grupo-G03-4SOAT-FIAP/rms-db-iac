@@ -28,11 +28,9 @@ export AWS_SECRET_ACCESS_KEY=???
 
 1. Clone este repositório;
 2. Navegue até a pasta raiz do projeto;
-3. Use o comando `terraform apply -var "db_password=???"` para aplicar o plano de execução;
+3. Use o comando `terraform apply` para aplicar o plano de execução;
 
-> Para excluir a infraestrutura provisionada pelo Terraform, use o comando `terraform destroy -var "db_password=???"`
-
-> Substitua os sinais de interrogação `???` acima pela senha do banco de dados.
+> Para excluir a infraestrutura provisionada pelo Terraform, use o comando `terraform destroy`
 
 ## Projetos relacionados
 
