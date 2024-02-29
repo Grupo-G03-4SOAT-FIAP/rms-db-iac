@@ -37,7 +37,7 @@ export AWS_SECRET_ACCESS_KEY=???
 ## Projetos relacionados
 
 BFF do Restaurant Management System (RMS)\
-[https://github.com/Grupo-G03-4SOAT-FIAP/rms-k8s-iac](https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff)
+https://github.com/Grupo-G03-4SOAT-FIAP/rms-bff
 
 ## Requisitos
 
