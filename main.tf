@@ -72,6 +72,7 @@ resource "aws_db_instance" "rms" {
   identifier                  = "rms-prod-postgres-standalone"
   instance_class              = "db.t3.micro" # A instance_class do Free Tier é db.t3.micro
   allocated_storage           = 5
+  db_name                     = "rms"
   engine                      = "postgres"
   engine_version              = "16.1"
   manage_master_user_password = true # Guarda o usuário e senha do banco de dados no AWS Secrets Manager
