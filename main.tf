@@ -19,6 +19,7 @@ module "vpc" {
   enable_dns_support   = true
 
   tags = {
+    Project = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -29,6 +30,7 @@ resource "aws_db_subnet_group" "rms" {
   subnet_ids = module.vpc.public_subnets
 
   tags = {
+    Project = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -53,6 +55,7 @@ resource "aws_security_group" "rds" {
   }
 
   tags = {
+    Project = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -84,6 +87,7 @@ resource "aws_db_instance" "rms" {
   skip_final_snapshot         = true
 
   tags = {
+    Project = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
