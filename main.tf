@@ -108,3 +108,6 @@ resource "aws_secretsmanager_secret_rotation" "rms" {
 data "aws_secretsmanager_secret" "rms" {
   arn = aws_db_instance.rms.master_user_secret[0].secret_arn
 }
+
+# Baseado no tutorial "Manage AWS RDS instances" do portal HashiCorp Developer
+# https://developer.hashicorp.com/terraform/tutorials/aws/aws-rds
