@@ -19,6 +19,7 @@ module "vpc" {
   enable_dns_support   = true
 
   tags = {
+    Project     = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -29,6 +30,7 @@ resource "aws_db_subnet_group" "rms" {
   subnet_ids = module.vpc.public_subnets
 
   tags = {
+    Project     = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -53,6 +55,7 @@ resource "aws_security_group" "rds" {
   }
 
   tags = {
+    Project     = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -72,6 +75,7 @@ resource "aws_db_instance" "rms" {
   identifier                  = "rms-prod-postgres-standalone"
   instance_class              = "db.t3.micro" # A instance_class do Free Tier é db.t3.micro
   allocated_storage           = 5
+  db_name                     = "rms"
   engine                      = "postgres"
   engine_version              = "16.1"
   manage_master_user_password = true # Guarda o usuário e senha do banco de dados no AWS Secrets Manager
@@ -83,6 +87,7 @@ resource "aws_db_instance" "rms" {
   skip_final_snapshot         = true
 
   tags = {
+    Project     = "rms"
     Terraform   = "true"
     Environment = "prod"
   }
@@ -103,3 +108,6 @@ resource "aws_secretsmanager_secret_rotation" "rms" {
 data "aws_secretsmanager_secret" "rms" {
   arn = aws_db_instance.rms.master_user_secret[0].secret_arn
 }
+
+# Baseado no tutorial "Manage AWS RDS instances" do portal HashiCorp Developer em 
+# https://developer.hashicorp.com/terraform/tutorials/aws/aws-rds
