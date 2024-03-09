@@ -8,6 +8,8 @@ Contains the Database related Infrastructure as code (IaC) of the [RMS project](
 
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 
+[Ver no Terraform Cloud](https://app.terraform.io/app/Grupo-G03-4SOAT-FIAP/workspaces/rms-db)↗️
+
 ## Pré-requisitos
 
 Você deve ter instalado o [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), a [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) e possuir uma conta na AWS.
